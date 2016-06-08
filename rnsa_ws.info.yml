@@ -1,0 +1,6 @@
+name: RNSA WS
+description: WS / API pour les niveaux d'alertes allergiques
+package: Custom
+
+type: module
+core: 8.x

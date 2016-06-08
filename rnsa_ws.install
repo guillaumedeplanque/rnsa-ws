@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the RNSA WS module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function rnsa_ws_schema() {
+  $schema['rnsa_pollen'] = array(
+    'description' => 'Stores rnsa data for pollen risks',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'department' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'risk' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('id', 'department')
+  );
+  
+  return $schema;
+}

@@ -1,0 +1,5 @@
+services:
+  rnsa:
+    class: Drupal\rnsa_ws\Rnsa
+    tags:
+      - { name: rnsa }

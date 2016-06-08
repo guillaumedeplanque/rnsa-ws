@@ -1,0 +1,12 @@
+rnsa_ws_pollen:
+  path: '/admin/rnsa/pollen'
+  defaults:
+    _form: '\Drupal\rnsa_ws\Form\PollenForm'
+    _title: 'Upload pollen CSV'
+rnsa_api_risk:
+  path: '/api/rnsa'
+  defaults: { _controller: '\Drupal\rnsa_ws\Controller\RnsaController::getRNSARiskAction' }
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+
